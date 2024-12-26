@@ -1,0 +1,427 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("assect/background.jpg");
+    background-attachment: fixed; /* Fix the background during scroll */
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .logo-circle img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #00AEEF;
+}
+
+/* Sub-links */
+.sub-links {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px 20px;
+    margin-top: 60px; /* Space for fixed navbar */
+}
+
+.sub-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.sub-links a:hover {
+    color: #00AEEF;
+}
+
+/* Content Section */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);background-color: #13131352;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-container img {
+    height: 200px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.text-content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #dbdada;
+}
+
+p {
+    color: #ddd;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* Animation for visibility */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Scrollable Container */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    scroll-behavior: smooth;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #00AEEF;
+    border-radius: 10px;
+}
+
+/* Box Styles */
+.box {
+    flex: 0 0 250px;
+    height: 300px;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.box h3 {
+    margin: 10px 0 5px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.box p {
+    color: #ddd;
+    font-size: 0.9rem;
+    margin: 0 10px;
+}
+
+/* Form Styles */
+.form-container {
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #ddd;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    background-color: #00AEEF;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #007BFF;
+}
+
+select {
+    background-color: #333;
+}
+
+/* Responsive Adjustments for Tablets and Mobiles */
+@media (max-width: 1024px) {
+    /* Navbar */
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .navbar .nav-links {
+        margin-top: 10px;
+    }
+
+    .navbar .nav-links a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+
+    /* Content Section */
+    .content-container {
+        width: 90%;
+        margin: 80px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content-container img {
+        height: 150px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /* Scrollable Container */
+    .scroll-container {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .box {
+        flex: 0 0 220px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar .nav-links a {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    /* Content Section */
+    .content-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .content-container img {
+        height: 120px;
+    }
+
+    /* Scrollable Container */
+    .scroll-container {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .box {
+        flex: 0 0 180px;
+        height: 200px;
+    }
+
+    .box img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .box h3 {
+        font-size: 1rem;
+    }
+
+    .box p {
+        font-size: 0.8rem;
+    }
+
+    /* Form Container */
+    .form-container {
+        padding: 15px;
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    input, select, button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar {
+        padding: 8px;
+        text-align: center;
+    }
+
+    .navbar .nav-links a {
+        font-size: 12px;
+        margin: 5px 2px;
+    }
+
+    /* Content Section */
+    .content-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .content-container img {
+        height: 100px;
+    }
+
+    /* Scrollable Container */
+    .scroll-container {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .box {
+        flex: 0 0 150px;
+        height: 180px;
+    }
+
+    .box img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .box h3 {
+        font-size: 0.9rem;
+    }
+
+    .box p {
+        font-size: 0.7rem;
+    }
+
+    /* Form Container */
+    .form-container {
+        padding: 10px;
+        width: 90%;
+    }
+
+    input, select, button {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* General Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height of the scrollbar for horizontal scrolling */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00AEEF; /* Blue color for the scrollbar thumb */
+    border-radius: 4px; /* Rounded edges for a smooth appearance */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Darker blue when hovered for an interactive feel */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track for a minimalist look */
+}
