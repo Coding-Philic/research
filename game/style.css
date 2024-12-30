@@ -1,0 +1,42 @@
+body{
+    background-color: #13062f;
+    background-image: url("Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+.upper{
+    margin-top: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.level{
+    margin-left: 0%;
+    margin-top: 2%;
+    
+    padding: 2px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+ 
+a>span{
+    border: 2px solid black;
+    border-radius: 10px; 
+    font-size: x-large;
+    padding: 5px;
+    text-decoration: none;
+   
+}
+a{
+    text-decoration: none;
+}
+
